@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Library App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Book Library App</h1>
+  </header>
+  <main>
+    <script src="library.js"></script>
+    <div class="search-container">
+      <input type="text" id="search-box" placeholder="Search for books...">
+      <button onclick="searchBooks()">Search</button>
+      <button onclick="clearSearch()">Clear</button>
+    </div>
+    <div class="results-container">
+      <h2 id="results-heading">Search Results:</h2>
+      <ul id="results-list">
+        <!-- Search results will be dynamically added here -->
+      </ul>
+      <div class="pagination">
+        <button onclick="previousPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+      </div>
+    </div>
+    <div class="subjects-container">
+      <h2>Popular Subjects:</h2>
+      <ul>
+        <li><a href="#" onclick="searchSubject('Fiction')">Fiction</a></li>
+        <li><a href="#" onclick="searchSubject('History')">History</a></li>
+        <li><a href="#" onclick="searchSubject('Science')">Science</a></li>
+        <li><a href="#" onclick="searchSubject('Art')">Art</a></li>
+        <li><a href="#" onclick="searchSubject('Travel')">Travel</a></li>
+      </ul>
+      <form onsubmit="getBooksBySubject(); return false;">
+        <input type="text" id="subject" placeholder="Enter a subject">
+        <button type="submit">Search</button>
+      </form>      
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Book Library App</p>
+  </footer>
+</body>
+</html>
